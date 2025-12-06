@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="project" thread-count="0" parallel="classes">
+    <!-- Comment out groups to run everything -->
+	<!--<groups>
+        <run>
+            <include name="HeaderTests" />
+        </run>
+    </groups>-->
+<!--    <parameter name="username" value="admin" />
+    <parameter name="password" value="password" />-->
+    <test name="FSTSeleniumProject">
+        <classes>
+            <class name="project.ProjectActivity01" />
+            <class name="project.ProjectActivity02" />
+            <class name="project.ProjectActivity03" />
+            <class name="project.ProjectActivity04" />
+            <class name="project.ProjectActivity05" />
+            <class name="project.ProjectActivity06" />
+            <class name="project.ProjectActivity07" />
+            <class name="project.ProjectActivity08" />
+            <class name="project.ProjectActivity09" />
+        </classes>
+    </test>
+</suite>
