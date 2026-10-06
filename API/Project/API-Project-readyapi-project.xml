@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0d599ce6-1cbb-4bbd-bbc0-cec487ff9d51" created="4.2.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="API Project" projectVersion="" updated="4.2.0 2026-08-18T11:17:15Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="967ce6a7-7634-43ee-b248-ff63f3cac6fd" lastUpdated="2026-10-04T10:29:13.490+05:30" wadlVersion="http://wadl.dev.java.net/2009/02" name="Generated API" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings id="02be983e-0bcd-4d64-b22d-fbeea48c44d6"/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://api.github.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Keys" path="/user/keys" id="0e78de0f-d316-4a83-be77-444dd717bbd3">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Keys" id="31c57756-ae52-4f8f-b86e-cac9cb6bbbfb" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>201</con:status>
+          <con:params/>
+          <con:element xmlns:keys="https://api.github.com/user/keys">keys:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>422</con:status>
+          <con:params/>
+          <con:element xmlns:keys="https://api.github.com/user/keys">keys:Fault</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="9253a280-596a-415f-8b09-1dc61d477eff" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://api.github.com</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="KeyId" path="/user/keys/{keyId}" id="25ee9235-f0f3-4aa0-a4b8-39a301a13978">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="KeyId" id="461a435c-e5a4-4b37-99f6-b49b6b03ce99" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>keyId</con:name>
+            <con:value>keyId</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>keyId</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>401 404</con:status>
+          <con:params/>
+          <con:element xmlns:key="https://api.github.com/user/keys/keyId">key:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:key="https://api.github.com/user/keys/keyId">key:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="d2d287ee-ae8e-4304-82bd-9daca70c216a" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://api.github.com</con:endpoint>
+          <con:parameters>
+            <con:entry key="keyId" value="keyId"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>keyId</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+      <con:method name="KeyId 2" id="ae3ad36d-1825-4fdc-88b6-ecef63a1bbdd" method="DELETE">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>keyId</con:name>
+            <con:value>keyId</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>keyId</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:key="https://api.github.com/user/keys/keyId">key:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>204</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="a554c139-f309-49bb-9931-8c4568e0ba81" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://api.github.com</con:endpoint>
+          <con:parameters>
+            <con:entry key="keyId" value="keyId"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>keyId</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="e5465dff-429e-4370-9b24-e115dc504625" name="Test Suite">
+    <con:settings id="5817b331-9a01-4a36-92e9-3a3f85774656"/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="206f521e-4178-4350-9c2f-b256dafd2103" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Post Add SSH Key" id="4bcd4b2a-1882-4803-b3fa-28f0ac229951">
+        <con:settings/>
+        <con:config service="Generated API" resourcePath="/user/keys" methodName="Keys" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Post Add SSH Key" id="9253a280-596a-415f-8b09-1dc61d477eff" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.github.com</con:endpoint>
+            <con:request>{
+  "title": "ReadyAPI-Test-Key",
+  "key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG+qv8NPWg4YXTwyAZEA69xRW3Menu2BSnbE6qTtOL/9 readyapi-test"
+}</con:request>
+            <con:originalUri>https://api.github.com/user/keys</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="a3cb6a62-351d-4cb5-9cf3-2cd42646d9f4" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>GitHubOAuth</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Transfer Key ID" id="5e5af7ac-942f-42c5-8391-3a65c75a7ddb">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>keyId</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Post Add SSH Key</con:sourceStep>
+            <con:sourcePath>$.id</con:sourcePath>
+            <con:targetType>keyId</con:targetType>
+            <con:targetStep>#TestCase#</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET SSH Key" id="9378041e-6643-42ae-bd1d-70c0d3271832">
+        <con:settings/>
+        <con:config service="Generated API" resourcePath="/user/keys/{keyId}" methodName="KeyId" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET SSH Key" id="d2d287ee-ae8e-4304-82bd-9daca70c216a" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.github.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.github.com/user/keys/keyId</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="a3e6b5f8-f3a8-40c9-93c7-96b8357c4b43" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>GitHubOAuth</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="keyId" value="165321037"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>keyId</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="DELETE SSH Key" id="2268be15-e4f6-4c2d-9123-b1569a9a4dd5">
+        <con:settings/>
+        <con:config service="Generated API" resourcePath="/user/keys/{keyId}" methodName="KeyId 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="DELETE SSH Key" id="a554c139-f309-49bb-9931-8c4568e0ba81" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.github.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.github.com/user/keys/keyId</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="6438e500-7f32-4168-afc0-d7331f9f330d" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>204</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="DataAndMetadataAssertion" id="3bc56001-fa05-4e4c-bc7f-e9f2f8264ee7" name="Smart Assertion 2">
+              <con:configuration xsi:type="con:DataAndMetadataAssertion">
+                <con:mode>Received Metadata</con:mode>
+                <con:elements>
+                  <con:path>$['Headers']['date']</con:path>
+                  <con:element>date</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Sun, 04 Oct 2026 08:51:15 GMT</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['server']</con:path>
+                  <con:element>server</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>github.com</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['transfer-encoding']</con:path>
+                  <con:element>transfer-encoding</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>chunked</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['vary']</con:path>
+                  <con:element>vary</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Accept-Encoding, Accept, X-Requested-With</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-frame-options']</con:path>
+                  <con:element>x-frame-options</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>deny</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-api-version-selected']</con:path>
+                  <con:element>x-github-api-version-selected</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>2022-11-28</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-remaining']</con:path>
+                  <con:element>x-ratelimit-remaining</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>4988</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-accepted-github-permissions']</con:path>
+                  <con:element>x-accepted-github-permissions</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>keys=write</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['referrer-policy']</con:path>
+                  <con:element>referrer-policy</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>origin-when-cross-origin, strict-origin-when-cross-origin</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['content-type']</con:path>
+                  <con:element>content-type</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>application/json; charset=utf-8</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['#status#']</con:path>
+                  <con:element>#status#</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>HTTP/1.1 204 No Content</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-limit']</con:path>
+                  <con:element>x-ratelimit-limit</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>5000</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-reset']</con:path>
+                  <con:element>x-ratelimit-reset</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>1791106454</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['strict-transport-security']</con:path>
+                  <con:element>strict-transport-security</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>max-age=31536000; includeSubdomains; preload</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['access-control-expose-headers']</con:path>
+                  <con:element>access-control-expose-headers</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-request-id']</con:path>
+                  <con:element>x-github-request-id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>CCFA:191E8E:5DD48E:6D1290:6AC21383</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['access-control-allow-origin']</con:path>
+                  <con:element>access-control-allow-origin</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>*</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-resource']</con:path>
+                  <con:element>x-ratelimit-resource</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>core</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-media-type']</con:path>
+                  <con:element>x-github-media-type</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>github.v3; format=json</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['content-security-policy']</con:path>
+                  <con:element>content-security-policy</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>default-src 'none'</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-xss-protection']</con:path>
+                  <con:element>x-xss-protection</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-content-type-options']</con:path>
+                  <con:element>x-content-type-options</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>nosniff</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-used']</con:path>
+                  <con:element>x-ratelimit-used</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>12</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-edge-region']</con:path>
+                  <con:element>x-github-edge-region</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>centralindia</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['github-authentication-token-expiration']</con:path>
+                  <con:element>github-authentication-token-expiration</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>2026-11-03 08:40:51 UTC</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:originalMessage>{"Headers":{"date":"Sun, 04 Oct 2026 08:51:15 GMT","server":"github.com","transfer-encoding":"chunked","vary":"Accept-Encoding, Accept, X-Requested-With","x-frame-options":"deny","x-github-api-version-selected":"2022-11-28","x-ratelimit-remaining":"4988","x-accepted-github-permissions":"keys=write","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","content-type":"application/json; charset=utf-8","#status#":"HTTP/1.1 404 Not Found","x-ratelimit-limit":"5000","x-ratelimit-reset":"1791106454","strict-transport-security":"max-age=31536000; includeSubdomains; preload","access-control-expose-headers":"ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning","x-github-request-id":"CCFA:191E8E:5DD48E:6D1290:6AC21383","access-control-allow-origin":"*","x-ratelimit-resource":"core","x-github-media-type":"github.v3; format=json","content-security-policy":"default-src 'none'","x-xss-protection":"0","x-content-type-options":"nosniff","x-ratelimit-used":"12","x-github-edge-region":"centralindia","github-authentication-token-expiration":"2026-11-03 08:40:51 UTC"}}</con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="DataAndMetadataAssertion" id="99d31262-813b-4549-b3f0-81ee9380e2c1" name="Smart Assertion 3">
+              <con:configuration xsi:type="con:DataAndMetadataAssertion">
+                <con:mode>Received Metadata</con:mode>
+                <con:elements>
+                  <con:path>$['Headers']['date']</con:path>
+                  <con:element>date</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Sun, 04 Oct 2026 08:59:48 GMT</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['server']</con:path>
+                  <con:element>server</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>github.com</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['vary']</con:path>
+                  <con:element>vary</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Accept-Encoding, Accept, X-Requested-With</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-limit']</con:path>
+                  <con:element>x-ratelimit-limit</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>5000</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-frame-options']</con:path>
+                  <con:element>x-frame-options</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>deny</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-reset']</con:path>
+                  <con:element>x-ratelimit-reset</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>1791106454</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-api-version-selected']</con:path>
+                  <con:element>x-github-api-version-selected</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>2022-11-28</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-remaining']</con:path>
+                  <con:element>x-ratelimit-remaining</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>4985</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['strict-transport-security']</con:path>
+                  <con:element>strict-transport-security</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>max-age=31536000; includeSubdomains; preload</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['access-control-expose-headers']</con:path>
+                  <con:element>access-control-expose-headers</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-request-id']</con:path>
+                  <con:element>x-github-request-id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>D71F:119D9E:631313:728E56:6AC21584</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['access-control-allow-origin']</con:path>
+                  <con:element>access-control-allow-origin</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>*</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-accepted-github-permissions']</con:path>
+                  <con:element>x-accepted-github-permissions</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>keys=write</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-resource']</con:path>
+                  <con:element>x-ratelimit-resource</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>core</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-media-type']</con:path>
+                  <con:element>x-github-media-type</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>github.v3; format=json</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['content-security-policy']</con:path>
+                  <con:element>content-security-policy</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>default-src 'none'</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-content-type-options']</con:path>
+                  <con:element>x-content-type-options</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>nosniff</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-xss-protection']</con:path>
+                  <con:element>x-xss-protection</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-used']</con:path>
+                  <con:element>x-ratelimit-used</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>15</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['referrer-policy']</con:path>
+                  <con:element>referrer-policy</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>origin-when-cross-origin, strict-origin-when-cross-origin</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['#status#']</con:path>
+                  <con:element>#status#</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>HTTP/1.1 204 No Content</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-edge-region']</con:path>
+                  <con:element>x-github-edge-region</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>centralindia</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['github-authentication-token-expiration']</con:path>
+                  <con:element>github-authentication-token-expiration</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>2026-11-03 08:40:51 UTC</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:originalMessage>{"Headers":{"date":"Sun, 04 Oct 2026 08:59:48 GMT","server":"github.com","vary":"Accept-Encoding, Accept, X-Requested-With","x-ratelimit-limit":"5000","x-frame-options":"deny","x-ratelimit-reset":"1791106454","x-github-api-version-selected":"2022-11-28","x-ratelimit-remaining":"4985","strict-transport-security":"max-age=31536000; includeSubdomains; preload","access-control-expose-headers":"ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning","x-github-request-id":"D71F:119D9E:631313:728E56:6AC21584","access-control-allow-origin":"*","x-accepted-github-permissions":"keys=write","x-ratelimit-resource":"core","x-github-media-type":"github.v3; format=json","content-security-policy":"default-src 'none'","x-content-type-options":"nosniff","x-xss-protection":"0","x-ratelimit-used":"15","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","#status#":"HTTP/1.1 204 No Content","x-github-edge-region":"centralindia","github-authentication-token-expiration":"2026-11-03 08:40:51 UTC"}}</con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="DataAndMetadataAssertion" id="a4f06581-eaca-4646-9046-7ee2fa85992c" name="Smart Assertion 4">
+              <con:configuration xsi:type="con:DataAndMetadataAssertion">
+                <con:mode>Received Metadata</con:mode>
+                <con:elements>
+                  <con:path>$['Headers']['date']</con:path>
+                  <con:element>date</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Sun, 04 Oct 2026 08:59:48 GMT</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['server']</con:path>
+                  <con:element>server</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>github.com</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['vary']</con:path>
+                  <con:element>vary</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Accept-Encoding, Accept, X-Requested-With</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-limit']</con:path>
+                  <con:element>x-ratelimit-limit</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>5000</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-frame-options']</con:path>
+                  <con:element>x-frame-options</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>deny</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-reset']</con:path>
+                  <con:element>x-ratelimit-reset</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>1791106454</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-api-version-selected']</con:path>
+                  <con:element>x-github-api-version-selected</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>2022-11-28</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-remaining']</con:path>
+                  <con:element>x-ratelimit-remaining</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>4985</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['strict-transport-security']</con:path>
+                  <con:element>strict-transport-security</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>max-age=31536000; includeSubdomains; preload</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['access-control-expose-headers']</con:path>
+                  <con:element>access-control-expose-headers</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-request-id']</con:path>
+                  <con:element>x-github-request-id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>D71F:119D9E:631313:728E56:6AC21584</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['access-control-allow-origin']</con:path>
+                  <con:element>access-control-allow-origin</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>*</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-accepted-github-permissions']</con:path>
+                  <con:element>x-accepted-github-permissions</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>keys=write</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-resource']</con:path>
+                  <con:element>x-ratelimit-resource</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>core</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-media-type']</con:path>
+                  <con:element>x-github-media-type</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>github.v3; format=json</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['content-security-policy']</con:path>
+                  <con:element>content-security-policy</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>default-src 'none'</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-content-type-options']</con:path>
+                  <con:element>x-content-type-options</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>nosniff</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-xss-protection']</con:path>
+                  <con:element>x-xss-protection</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-used']</con:path>
+                  <con:element>x-ratelimit-used</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>15</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['referrer-policy']</con:path>
+                  <con:element>referrer-policy</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>origin-when-cross-origin, strict-origin-when-cross-origin</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['#status#']</con:path>
+                  <con:element>#status#</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>HTTP/1.1 204 No Content</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-edge-region']</con:path>
+                  <con:element>x-github-edge-region</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>centralindia</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['github-authentication-token-expiration']</con:path>
+                  <con:element>github-authentication-token-expiration</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>2026-11-03 08:40:51 UTC</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:originalMessage>{"Headers":{"date":"Sun, 04 Oct 2026 08:59:48 GMT","server":"github.com","vary":"Accept-Encoding, Accept, X-Requested-With","x-ratelimit-limit":"5000","x-frame-options":"deny","x-ratelimit-reset":"1791106454","x-github-api-version-selected":"2022-11-28","x-ratelimit-remaining":"4985","strict-transport-security":"max-age=31536000; includeSubdomains; preload","access-control-expose-headers":"ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning","x-github-request-id":"D71F:119D9E:631313:728E56:6AC21584","access-control-allow-origin":"*","x-accepted-github-permissions":"keys=write","x-ratelimit-resource":"core","x-github-media-type":"github.v3; format=json","content-security-policy":"default-src 'none'","x-content-type-options":"nosniff","x-xss-protection":"0","x-ratelimit-used":"15","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","#status#":"HTTP/1.1 204 No Content","x-github-edge-region":"centralindia","github-authentication-token-expiration":"2026-11-03 08:40:51 UTC"}}</con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="DataAndMetadataAssertion" id="0a77bb35-fb5a-46d1-88de-6457ab44b39c" name="Smart Assertion 5">
+              <con:configuration xsi:type="con:DataAndMetadataAssertion">
+                <con:mode>Received Data</con:mode>
+                <con:originalMessage>&lt;data contentType="null" contentLength="0">&lt;![CDATA[]]&gt;&lt;/data></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="DataAndMetadataAssertion" id="a9677c53-bfd9-4485-b244-fcd3d20534ad" name="Smart Assertion 6">
+              <con:configuration xsi:type="con:DataAndMetadataAssertion">
+                <con:mode>Received Metadata</con:mode>
+                <con:elements>
+                  <con:path>$['Headers']['date']</con:path>
+                  <con:element>date</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Sun, 04 Oct 2026 09:05:34 GMT</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['server']</con:path>
+                  <con:element>server</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>github.com</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['vary']</con:path>
+                  <con:element>vary</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Accept-Encoding, Accept, X-Requested-With</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-limit']</con:path>
+                  <con:element>x-ratelimit-limit</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>5000</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-frame-options']</con:path>
+                  <con:element>x-frame-options</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>deny</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-reset']</con:path>
+                  <con:element>x-ratelimit-reset</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>1791106454</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-api-version-selected']</con:path>
+                  <con:element>x-github-api-version-selected</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>2022-11-28</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-remaining']</con:path>
+                  <con:element>x-ratelimit-remaining</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>4982</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['strict-transport-security']</con:path>
+                  <con:element>strict-transport-security</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>max-age=31536000; includeSubdomains; preload</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['access-control-expose-headers']</con:path>
+                  <con:element>access-control-expose-headers</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-request-id']</con:path>
+                  <con:element>x-github-request-id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>D221:37E824:63409C:72DE70:6AC216DE</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['access-control-allow-origin']</con:path>
+                  <con:element>access-control-allow-origin</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>*</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-accepted-github-permissions']</con:path>
+                  <con:element>x-accepted-github-permissions</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>keys=write</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-resource']</con:path>
+                  <con:element>x-ratelimit-resource</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>core</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-media-type']</con:path>
+                  <con:element>x-github-media-type</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>github.v3; format=json</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['content-security-policy']</con:path>
+                  <con:element>content-security-policy</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>default-src 'none'</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-content-type-options']</con:path>
+                  <con:element>x-content-type-options</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>nosniff</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-xss-protection']</con:path>
+                  <con:element>x-xss-protection</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-ratelimit-used']</con:path>
+                  <con:element>x-ratelimit-used</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>18</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['referrer-policy']</con:path>
+                  <con:element>referrer-policy</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>origin-when-cross-origin, strict-origin-when-cross-origin</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['#status#']</con:path>
+                  <con:element>#status#</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>HTTP/1.1 204 No Content</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-github-edge-region']</con:path>
+                  <con:element>x-github-edge-region</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>centralindia</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['github-authentication-token-expiration']</con:path>
+                  <con:element>github-authentication-token-expiration</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>2026-11-03 08:40:51 UTC</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:originalMessage>{"Headers":{"date":"Sun, 04 Oct 2026 09:05:34 GMT","server":"github.com","vary":"Accept-Encoding, Accept, X-Requested-With","x-ratelimit-limit":"5000","x-frame-options":"deny","x-ratelimit-reset":"1791106454","x-github-api-version-selected":"2022-11-28","x-ratelimit-remaining":"4982","strict-transport-security":"max-age=31536000; includeSubdomains; preload","access-control-expose-headers":"ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning","x-github-request-id":"D221:37E824:63409C:72DE70:6AC216DE","access-control-allow-origin":"*","x-accepted-github-permissions":"keys=write","x-ratelimit-resource":"core","x-github-media-type":"github.v3; format=json","content-security-policy":"default-src 'none'","x-content-type-options":"nosniff","x-xss-protection":"0","x-ratelimit-used":"18","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","#status#":"HTTP/1.1 204 No Content","x-github-edge-region":"centralindia","github-authentication-token-expiration":"2026-11-03 08:40:51 UTC"}}</con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>GitHubOAuth</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="keyId" value="${#TestCase#keyId}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>keyId</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>keyId</con:name>
+          <con:value>165328601</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer>
+    <con:oAuth2Profile>
+      <con:name>GitHubOAuth</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessToken>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</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:jwtConfiguration/>
+      <con:applyAdditionalParameters>false</con:applyAdditionalParameters>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth2Profile>
+  </con:oAuth2ProfileContainer>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository>
+    <con:basicAuthEntry>
+      <con:name>GitHubAuth</con:name>
+      <con:type>Basic</con:type>
+      <con:preemptive>false</con:preemptive>
+    </con:basicAuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>GitHubOAuth</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessToken>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</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
+      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:jwtConfiguration/>
+      <con:applyAdditionalParameters>false</con:applyAdditionalParameters>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+  </con:authRepository>
+  <con:tags/>
+</con:soapui-project>
